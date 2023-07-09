@@ -7,7 +7,7 @@ from io import BytesIO
 
 import toolbox as tb
 
-model = YOLO("yolov8n.pt")
+model = YOLO("best.pt")
 
 st.write("""
     # SightAi
