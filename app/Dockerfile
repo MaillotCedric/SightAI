@@ -8,12 +8,12 @@ WORKDIR /app
 RUN pip install wheel
 COPY ./requirements.txt requirements.txt
 RUN pip install -r requirements.txt
+EXPOSE 8501
 
 # Copy the project code to the container
 COPY . .
 
-# Expose the port on which the Django development server will run
-EXPOSE 8000
+ENTRYPOINT ["streamlit", "run"]
 
 # Run the Django development server
-CMD ["streamlit", "run", ".app/index.py", "0.0.0.0:8000"]
+CMD ["index.py"]
