@@ -28,13 +28,14 @@ def plot_bboxes(image, boxes, labels=[], colors=[], score=True, conf=None):
     # Define COCO Labels
     if labels == []:
         labels = {
-                0: "pikachu",
-                1: "charmander",
-                2: "bulbasaur",
-                3: "squirtle",
-                4: "eevee",
-                5: "other",
-                6: "jigglypuff"
+                0: "__background__",
+                1: "pikachu",
+                2: "charmander",
+                3: "bulbasaur",
+                4: "squirtle",
+                5: "eevee",
+                6: "other",
+                7: "jigglypuff"
                 }
 
         # labels = {
