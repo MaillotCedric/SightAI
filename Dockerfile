@@ -6,11 +6,11 @@ WORKDIR /app
 
 # Install dependencies
 RUN pip install wheel
-COPY /app/requirements.txt /app/
-RUN pip install -r /app/requirements.txt
+COPY ./requirements.txt requirements.txt
+RUN pip install -r requirements.txt
 
 # Copy the project code to the container
-COPY . /app/
+COPY . .
 
 # Expose the port on which the Django development server will run
 EXPOSE 8000
